@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>حساب المستخدم - ALGZAR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .profile-hero {
+            height: 380px;
+            background-image: linear-gradient(rgba(35,18,60,0.55), rgba(35,18,60,0.45)), url('/assets/images/algzar-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            border-radius: 12px;
+            margin: 20px auto;
+            max-width: 1100px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .profile-card {
+            max-width: 900px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <section class="profile-hero">
+            <div>
+                <img src="/assets/images/algazar-logo.svg" alt="algazar logo" style="height:80px;margin-bottom:10px">
+                <h1>مرحبا، algazar</h1>
+                <p>هذه صفحة المستخدم — يمكنك تغيير الصورة الخلفية في <strong>/assets/images/algzar-bg.jpg</strong></p>
+            </div>
+        </section>
+
+        <section class="profile-card">
+            <div style="display:flex;gap:20px;align-items:center">
+                <img src="https://ui-avatars.com/api/?name=algazar&background=6366f1&color=fff" alt="avatar" style="width:96px;height:96px;border-radius:12px">
+                <div>
+                    <h2>algazar</h2>
+                    <p>البريد الإلكتروني: info@algazar.example</p>
+                    <p>رقم الهاتف: 01234567890</p>
+                </div>
+                <div style="margin-left:auto">
+                    <button class="btn-primary" onclick="editProfile()"><i class="fas fa-edit"></i> تعديل الملف</button>
+                </div>
+            </div>
+            <hr style="margin:16px 0">
+            <h3>نشاط الحساب</h3>
+            <p>هنا يمكن عرض الطلبات، الرسائل، والإعدادات الخاصة بالمستخدم.</p>
+        </section>
+
+        <section class="profile-card">
+            <h3>تعليمات Git سريعة</h3>
+            <pre style="background:#f3f4f6;padding:1rem;border-radius:8px;overflow:auto"># اضف الصورة في المشروع
+# ضع الصورة المرفقة في: assets/images/algzar-bg.jpg
+
+git add assets/images/algzar-bg.jpg
+git commit -m "Add dashboard background"
+git push</pre>
+        </section>
+    </main>
+
+    <script>
+        function editProfile(){ alert('فتح صفحة التعديل (محلياً)'); }
+    </script>
+</body>
+</html>
