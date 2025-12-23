@@ -99,6 +99,17 @@ body {
     font-size: 2rem;
 }
 
+.logo .bg-thumb {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background-image: url('/assets/images/algzar-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    box-shadow: var(--shadow);
+}
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -1642,6 +1653,7 @@ console.log('موقع حجز التصميم الجرافيكي - تم التحم
         <div class="sidebar-header">
             <div class="logo">
                 <img src="/assets/images/algazar-logo.svg" alt="algazar logo" style="height:36px;border-radius:6px;margin-left:8px">
+                <span class="bg-thumb" aria-hidden="true" style="margin-left:8px"></span>
                 <span>algazar</span>
             </div>
         </div>
