@@ -23,10 +23,10 @@
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-/* Hero banner styles (uses /assets/hero.jpg) */
+/* Hero banner styles (uses /assets/images/algzar-bg.jpg) */
 .hero-banner {
     height: 320px;
-    background-image: linear-gradient(rgba(35,18,60,0.55), rgba(35,18,60,0.45)), url('/assets/hero.jpg');
+    background-image: linear-gradient(rgba(35,18,60,0.55), rgba(35,18,60,0.45)), url('/assets/images/algzar-bg.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -57,7 +57,11 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--light-color);
+    background-image: linear-gradient(rgba(10,10,20,0.45), rgba(10,10,20,0.45)), url('/assets/images/algzar-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 .container {
@@ -93,6 +97,17 @@ body {
 
 .logo i {
     font-size: 2rem;
+}
+
+.logo .bg-thumb {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background-image: url('/assets/images/algzar-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    box-shadow: var(--shadow);
 }
 
 .nav-links {
@@ -1637,7 +1652,8 @@ console.log('موقع حجز التصميم الجرافيكي - تم التحم
     <aside class="sidebar">
         <div class="sidebar-header">
             <div class="logo">
-                <img src="/assets/favicon.svg" alt="logo" style="height:36px;border-radius:6px;margin-left:8px">
+                <img src="/assets/images/algazar-logo.svg" alt="algazar logo" style="height:36px;border-radius:6px;margin-left:8px">
+                <span class="bg-thumb" aria-hidden="true" style="margin-left:8px"></span>
                 <span>algazar</span>
             </div>
         </div>
@@ -1684,8 +1700,8 @@ console.log('موقع حجز التصميم الجرافيكي - تم التحم
     <main class="dashboard-main">
         <section class="hero-banner">
             <div class="container hero-logo">
-                <!-- Use hero.jpg if present; fallback to SVG if missing -->
-                <img id="heroImg" src="/assets/hero.jpg" alt="ALGZAR logo" onerror="this.onerror=null;this.src='/assets/fallback-hero.svg'">
+                <!-- Use algzar-bg.jpg if present; fallback to SVG if missing -->
+                <img id="heroImg" src="/assets/images/algzar-bg.jpg" alt="ALGZAR logo" onerror="this.onerror=null;this.src='/assets/fallback-hero.svg'">
                 <h1>ALGZAR</h1>
             </div>
         </section>
@@ -2166,6 +2182,16 @@ console.log('موقع حجز التصميم الجرافيكي - تم التحم
                             </label>
                         </div>
                         <button class="btn-primary">حفظ التغييرات</button>
+                    </div>
+                    <div class="setting-section">
+                        <h3>تعديل الكود عبر Git</h3>
+                        <p>لتعديل الكود وإرسال التغييرات إلى المستودع اتبع الأوامر التالية محلياً:</p>
+                        <pre style="background:#f3f4f6;padding:1rem;border-radius:8px;overflow:auto">git checkout -b feature/update-ui
+# عدل الملفات (مثلاً: assets/images/algzar-bg.jpg أو dashbord.html)
+git add .
+git commit -m "Update dashboard background and add git instructions"
+git push origin feature/update-ui</pre>
+                        <p>بعد رفع الفرع افتح Pull Request لدمج التغييرات.</p>
                     </div>
                 </div>
             </div>

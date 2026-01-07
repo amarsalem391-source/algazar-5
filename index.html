@@ -26,7 +26,11 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--light-color);
+    background-image: linear-gradient(rgba(10,10,20,0.45), rgba(10,10,20,0.45)), url('/assets/images/algzar-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 .container {
@@ -62,6 +66,17 @@ body {
 
 .logo i {
     font-size: 2rem;
+}
+
+.logo .bg-thumb {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background-image: url('/assets/images/algzar-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    box-shadow: var(--shadow);
 }
 
 .nav-links {
@@ -126,12 +141,15 @@ body {
     font-size: 1.1rem;
 }
 
-/* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-image: linear-gradient(rgba(35,18,60,0.55), rgba(35,18,60,0.45)), url('/assets/images/algzar-bg.jpg');
+    background-size: cover;
+    background-position: center;
     color: var(--white);
     padding: 6rem 0;
     text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
 
 .hero h1 {
@@ -1585,7 +1603,8 @@ console.log('موقع حجز التصميم الجرافيكي - تم التحم
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <img src="/assets/favicon.svg" alt="logo" style="height:36px;border-radius:6px;margin-right:8px">
+                <img src="/assets/images/algazar-logo.svg" alt="algazar logo" style="height:36px;border-radius:6px;margin-right:8px">
+                <span class="bg-thumb" aria-hidden="true"></span>
                 <span>algazar</span>
             </div>
             <ul class="nav-links">
